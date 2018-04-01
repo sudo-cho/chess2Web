@@ -15,5 +15,6 @@ npm run dev
 npm run deploy
 
 ## Submiting Modifications 
+```
 
 Check the [wiki](https://github.com/sudo-cho/chess2Web/wiki/Chess2web-rules-for-modifications) for detailed explanations about modifications of the repo.
