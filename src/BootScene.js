@@ -2,9 +2,9 @@ import AnimatedTiles from 'phaser-animated-tiles';
 
 class BootScene extends Phaser.Scene {
     constructor(test) {
-      super({
-        key: 'BootScene'
-      });
+        super({
+            key: 'BootScene'
+        });
     }
     preload()
     {
@@ -22,33 +22,33 @@ class BootScene extends Phaser.Scene {
         this.load.atlas('mario-sprites', 'assets/mario-sprites.png', 'assets/mario-sprites.json');
         // Music to play. Need to cut it for it to loop properly
         this.load.audio('overworld', [
-          'assets/music/overworld.ogg',
-          'assets/music/overworld.mp3'
+            'assets/music/overworld.ogg',
+            'assets/music/overworld.mp3'
         ]);
-    
+
         this.load.audioSprite('sfx', [
-          'assets/audio/sfx.ogg',
-          'assets/audio/sfx.mp3'
+            'assets/audio/sfx.ogg',
+            'assets/audio/sfx.mp3'
         ], 'assets/audio/sfx.json', {
             instances: 4
-          });
-    
+        });
+
         this.load.bitmapFont('font', 'assets/fonts/font.png', 'assets/fonts/font.fnt');
-    
+
         // Load plugin for animated tiles. This is just a first build of an upcoming plugin.
         // It's not optimized and lack features. The source code will be released when an
         // official first version is released.
         console.log("before")
         this.load.plugin('AnimatedTiles', AnimatedTiles);
 
-          console.log("af")
+        console.log("af")
         this.load.json('attractMode', 'assets/json/attractMode.json');    }
     create()
     {
-      console.log("BOOTED");
-//      this.scene.start('MarioBrosScene');
-       this.scene.start('TitleScene');
-        
+        console.log("BOOTED");
+        //      this.scene.start('MarioBrosScene');
+        this.scene.start('TitleScene');
+
     }
 }
 

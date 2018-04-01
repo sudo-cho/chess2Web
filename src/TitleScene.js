@@ -1,8 +1,8 @@
 class TitleScene extends Phaser.Scene {
     constructor(test) {
-      super({
-        key: 'TitleScene'
-      });
+        super({
+            key: 'TitleScene'
+        });
     }
     preload()
     {
@@ -15,7 +15,7 @@ class TitleScene extends Phaser.Scene {
             frames: [{ frame: 'title', key: 'mario-sprites' }],
         };
         this.anims.create(config);
-    
+
         this.title = this.add.sprite(this.sys.game.config.width/2, 16*5);
         this.title.play("title");
         this.attractMode = this.scene.launch('MarioBrosScene');
@@ -52,7 +52,7 @@ class TitleScene extends Phaser.Scene {
         this.blink = 1000;
 
         this.startKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X);
-        
+
     }
     update(time, delta)
     {
